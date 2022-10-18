@@ -11,17 +11,21 @@ namespace _作業_Exec_For05___21謝孟勳
     {
         static void Main(string[] args)
         {
-            //string row = string.Empty;
+            string[] numbers = { "1", "2", "3", "4", "5" };
             
-            for (int i = 0; i <= 5; i++)
-            { 
-                int countOfint = 4-i;
-                int countOfnumber = i;
-                
-                string row = new string('+' , countOfint) + new string('i', countOfnumber);
-                Console.WriteLine(row);
-
+            for (int i = 0; i < 5; i++)
+            {
+                for (int k = 0; k < 5 - i - 1; k++)
+                {
+                    Console.Write("+");
+                }
+                for (int k = 0; k < i + 1; k++)
+                {
+                    Console.Write(numbers[i]);
+                }
+                Console.WriteLine();
             }
+            Console.ReadLine();
 
         }
     }
